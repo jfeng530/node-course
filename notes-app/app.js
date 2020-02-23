@@ -20,11 +20,16 @@
 // --- Importing npm Modules ---
 // Note: node currently does not support 'import', hence 'require' is used
 
-const validator = require('validator')
+// const validator = require('validator')
 const getNotes = require('./notes')
 
 const notes = getNotes()
 console.log(notes)
 
-console.log(validator.isEmail('email.com'))
-console.log(validator.isURL('https/mead.io'))
+// console.log(validator.isEmail('email.com'))
+// console.log(validator.isURL('https/mead.io'))
+
+const chalk = require('chalk')
+const success = chalk.red.bold.inverse
+
+console.log(success('Error!'))
