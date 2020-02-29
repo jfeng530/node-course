@@ -22,14 +22,22 @@
 
 // const validator = require('validator')
 const getNotes = require('./notes')
+const chalk = require('chalk')
 
-const notes = getNotes()
-console.log(notes)
+// const notes = getNotes()
+// console.log(notes)
 
 // console.log(validator.isEmail('email.com'))
 // console.log(validator.isURL('https/mead.io'))
 
-const chalk = require('chalk')
-const success = chalk.red.bold.inverse
+// const success = chalk.green.bold.inverse
+// console.log(success('Success!'))
 
-console.log(success('Error!'))
+const command = process.argv[2]
+console.log(process.argv)
+
+if (command === 'add') {
+  console.log('Adding note...')
+} else if (command === 'remove') {
+  console.log('Removing note...')
+}
