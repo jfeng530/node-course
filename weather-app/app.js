@@ -26,7 +26,7 @@ request({ url: laURL, json: true }, (error, response) => {
   if (error) {
     console.log('Unable to connect to location services')
   } else if (response.body.features.length === 0) {
-    console.log('Unable to find location. Try again with different term.')
+    console.log('Unable to find location. Try again.')
   } else {
     const latitude = response.body.features[0].center[1]
     const longitude = response.body.features[0].center[0]
